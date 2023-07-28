@@ -27,11 +27,8 @@ var romanToInt = function(s) {
     return output;
 };
 //should give 3
-//currently -3
 console.log(romanToInt(test1));
 //should give 58
-//currently 52
 console.log(romanToInt(test2));
 //should give 1994
-//currently 1984
 console.log(romanToInt(test3));
