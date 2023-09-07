@@ -1,29 +1,23 @@
 
 // Definition for singly-linked list.
-  function ListNode(val, next) {
-      this.val = (val===undefined ? 0 : val)
-      this.next = (next===undefined ? null : next)
- }
- 
+function ListNode(val, next) {
+    this.val = (val===undefined ? 0 : val)
+    this.next = (next===undefined ? null : next)
+}
 
-var node1A = ListNode(2, node1B);
-var node1B = ListNode(4, node1C);
-var node1C = ListNode(3);
+var node1C = new ListNode(3);
+var node1B = new ListNode(4, node1C);
+var node1A = new ListNode(2, node1B);
 
-var node2A = ListNode(5, node2B);
-var node2B = ListNode(6, node2C);
-var node2C = ListNode(4);
+var node2C = new ListNode(4);
+var node2B = new ListNode(6, node2C);
+var node2A = new ListNode(5, node2B);
+
+
+console.log(node1A.next)
 
 var addTwoNumbers = function(l1, l2) {
-    let arr1 = [];
-    let arr2 = [];
     
-    const extract = (node, arr) => {
-        
-    }
-    extract(l1, arr1)
-    extract(l2, arr2)
-    return arr1
 };
 
 console.log(addTwoNumbers(node1A, node2A));
