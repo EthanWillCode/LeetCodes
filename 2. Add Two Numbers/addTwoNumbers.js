@@ -19,6 +19,7 @@ console.log(node1A)
 var addTwoNumbers = function(l1, l2) {
     let arr1 = [];
     let arr2 = [];
+    let newArr = [];
 
     function extract(node, arr){
 
@@ -32,10 +33,12 @@ var addTwoNumbers = function(l1, l2) {
     extract(l1,arr1);
     extract(l2,arr2);
 
-    arr1.reverse();
-    arr2.reverse();
+    
 
-    return arr1
+    //re-node-ify
+    newArr.reverse();
+    
+
 
 
 };
