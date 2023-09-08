@@ -14,10 +14,30 @@ var node2B = new ListNode(6, node2C);
 var node2A = new ListNode(5, node2B);
 
 
-console.log(node1A.next)
+console.log(node1A)
 
 var addTwoNumbers = function(l1, l2) {
-    
+    let arr1 = [];
+    let arr2 = [];
+
+    function extract(node, arr){
+
+        while(node.next != null){
+            arr.push(node.val);
+            node = node.next
+        }
+        arr.push(node.val);
+    }
+
+    extract(l1,arr1);
+    extract(l2,arr2);
+
+    arr1.reverse();
+    arr2.reverse();
+
+    return arr1
+
+
 };
 
 console.log(addTwoNumbers(node1A, node2A));
