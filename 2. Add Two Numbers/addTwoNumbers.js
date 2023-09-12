@@ -17,30 +17,22 @@ var node2A = new ListNode(5, node2B);
 console.log(node1A)
 
 var addTwoNumbers = function(l1, l2) {
-    let arr1 = [];
-    let arr2 = [];
-    let newArr = [];
-
-    function extract(node, arr){
-
-        while(node.next != null){
-            arr.push(node.val);
-            node = node.next
+    let holdArr = [0];
+        for(let i=0; l1.next != undefined && l2.next !=undefined; i++){
+                let newVal = l1.val + l2.val + holdArr[i]
+                if(newVal < 10) {
+                    holdArr[i] = newVal;
+                    console.log(newVal)
+                } else {
+                    holdArr[i] = newVal-10;
+                    holdArr[i +1] = 1;
+                } 
+                l1 = l1.next;
+                l2 = l2.next;
         }
-        arr.push(node.val);
-    }
-
-    extract(l1,arr1);
-    extract(l2,arr2);
-
+        console.log(holdArr)
+        for(let i = 0; i< holdArr.length)
+    };
     
-
-    //re-node-ify
-    newArr.reverse();
-    
-
-
-
-};
 
 console.log(addTwoNumbers(node1A, node2A));
