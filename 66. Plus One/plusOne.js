@@ -6,14 +6,25 @@ let test1 = [1,2,3];
 let test2 = [4,3,2,1];
 let test3 = [9];
 let test4 = [0];
-
+let test5 = [9,9,9,9,9,9];
 
 
 var plusOne = function(digits) {
-    if(digits[digits.length -1] !=9){
-        digits[digits.length -1] +=1;
-    } else {
-        digits[digits.length -1] = 0;
-        digits[digits.length -2]  
+    let newArr = digits
+    for(let i= newArr.length-1; i > 0; i--){
+        if(newArr[i] === 9){
+            newArr[i] = 0;
+            newArr[i-1] +=1;
+        } else {
+            newArr[i] +=1;
+            break;
+        }
     }
+    return newArr;
 };
+
+console.log(plusOne(test1));
+console.log(plusOne(test2));
+console.log(plusOne(test3));
+console.log(plusOne(test4));
+console.log(plusOne(test5));
