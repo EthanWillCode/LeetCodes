@@ -10,16 +10,11 @@ let test5 = [9,9,9,9,9,9];
 
 
 var plusOne = function(digits) {
-    let newArr = digits
-    for(let i= newArr.length-1; i > 0; i--){
-        if(newArr[i] === 9){
-            newArr[i] = 0;
-            newArr[i-1] +=1;
-        } else {
-            newArr[i] +=1;
-            break;
-        }
-    }
+    let newArr = digits.reverse();
+    console.log(newArr);
+    // for(let i = 0; i<newArr.length; i++){
+
+    // }
     return newArr;
 };
 
